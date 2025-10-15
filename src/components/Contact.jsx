@@ -26,40 +26,58 @@ export default function Contact() {
         {/* Contact Info Cards */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Email */}
-          <div className="bg-white shadow-md rounded-xl p-6 hover:shadow-xl transition">
+          <motion.div
+            whileHover={{ scale: 1.05, y: -5 }}
+            transition={{ type: "spring", stiffness: 200 }}
+            className="bg-white shadow-md rounded-xl p-6 hover:shadow-2xl transition break-words"
+          >
             <FaEnvelope className="text-3xl text-blue-600 mx-auto mb-3" />
             <h3 className="text-lg font-semibold mb-1">Email</h3>
             <a
               href="mailto:biggeststeve2006@gmail.com"
-              className="text-slate-600 hover:text-blue-600 transition"
+              className="text-slate-600 hover:text-blue-600 transition text-sm break-all"
             >
               biggeststeve2006@gmail.com
             </a>
-          </div>
+          </motion.div>
 
           {/* Phone */}
-          <div className="bg-white shadow-md rounded-xl p-6 hover:shadow-xl transition">
+          <motion.div
+            whileHover={{ scale: 1.05, y: -5 }}
+            transition={{ type: "spring", stiffness: 200 }}
+            className="bg-white shadow-md rounded-xl p-6 hover:shadow-2xl transition"
+          >
             <FaPhoneAlt className="text-3xl text-blue-600 mx-auto mb-3" />
             <h3 className="text-lg font-semibold mb-1">Phone</h3>
             <p className="text-slate-600">08145366651</p>
-          </div>
+          </motion.div>
 
           {/* Location */}
-          <div className="bg-white shadow-md rounded-xl p-6 hover:shadow-xl transition">
+          <motion.div
+            whileHover={{ scale: 1.05, y: -5 }}
+            transition={{ type: "spring", stiffness: 200 }}
+            className="bg-white shadow-md rounded-xl p-6 hover:shadow-2xl transition"
+          >
             <FaMapMarkerAlt className="text-3xl text-blue-600 mx-auto mb-3" />
             <h3 className="text-lg font-semibold mb-1">Location</h3>
             <p className="text-slate-600">Lagos, Nigeria</p>
-          </div>
+          </motion.div>
         </div>
 
-        <div className="mt-16">
+        {/* Button */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="mt-16"
+        >
           <a
             href="mailto:biggeststeve2006@gmail.com"
-            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg transition"
+            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg transition shadow-md hover:shadow-lg"
           >
             Send an Email
           </a>
-        </div>
+        </motion.div>
       </motion.div>
     </section>
   );
