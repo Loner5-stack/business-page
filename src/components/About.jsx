@@ -1,4 +1,5 @@
 import React from "react";
+import profile from "/src/assets/placeholder.png"; // ✅ Absolute path for reliability
 
 export default function About() {
   return (
@@ -23,9 +24,10 @@ export default function About() {
         <div className="flex justify-center">
           <div className="rounded-xl overflow-hidden shadow-lg w-60 h-60">
             <img
-              src="/src/assets/placeholder.png"
-              alt="profile"
-              className="w-full h-full object-cover"
+              src={profile}
+              alt="Profile"
+              className="object-cover w-full h-full"
+              loading="lazy"
             />
           </div>
         </div>
